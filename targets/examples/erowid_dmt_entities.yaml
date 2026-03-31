@@ -1,0 +1,44 @@
+# Erowid DMT Entity Encounters
+# Scrape trip reports that mention autonomous entities, beings, or contact
+
+target_url: "https://erowid.org/experiences/subs/exp_DMT.shtml"
+max_depth: 3
+max_pages: 50
+
+# McGee will only follow links to reports matching this criteria
+selection_prompt: |
+  Only follow links to experience reports that mention:
+  - Geometric entities, beings, or alien contact
+  - Machine elves, jesters, or autonomous entities
+  - Breakthrough experiences with entity interaction
+  - Beings made of light, geometry, or information
+  - Communication with non-human intelligence
+  
+  Skip reports that are just about:
+  - Colors and patterns without entities
+  - Failed attempts or low doses
+  - Just physical sensations
+
+# What to extract from each matching page
+extraction_prompt: |
+  Extract the following information as JSON:
+  {
+    "title": "report title",
+    "author": "author name if available",
+    "date": "date if available",
+    "substance": "DMT",
+    "dosage": "amount in mg if mentioned",
+    "roa": "route of administration (smoked, vaped, etc)",
+    "entity_description": "detailed description of any entities encountered",
+    "entity_type": "category: jesters, geometric beings, insectoid, other",
+    "communication": "how the entities communicated, if mentioned",
+    "geometry_patterns": "any geometric patterns or structures mentioned",
+    "duration": "duration of entity contact if mentioned",
+    "key_quotes": ["array of notable quotes about the entities"]
+  }
+  
+  If a field is not present, use null.
+
+# Output format
+output_format: json
+output_path: "data/erowid_dmt_entities.json"

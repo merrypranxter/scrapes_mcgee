@@ -1,0 +1,38 @@
+{
+  "name": "Scrapes McGee",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+  
+  "postCreateCommand": "pip install -e .",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "charliermarsh.ruff"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.formatting.provider": "black",
+        "python.linting.enabled": true,
+        "python.linting.ruffEnabled": true,
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  
+  "forwardPorts": [],
+  
+  "remoteUser": "vscode",
+  
+  "containerEnv": {
+    "PYTHONUNBUFFERED": "1"
+  }
+}

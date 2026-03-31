@@ -1,0 +1,36 @@
+# Terence McKenna on Language
+# Scrape transcripts focusing on language, etymology, and linguistic philosophy
+
+target_url: "https://organism.earth/library/document/language-and-the-psychedelic-experience"
+max_depth: 2
+max_pages: 20
+
+selection_prompt: |
+  Follow links to Terence McKenna transcripts or talks that discuss:
+  - Language as cultural operating system
+  - Etymology and word origins
+  - Glossolalia or alien languages
+  - Language and consciousness
+  - Logocentrism
+  - Language dissolution in psychedelic states
+  
+  Skip:
+  - General biographical info
+  - Event announcements
+  - Unrelated topics
+
+extraction_prompt: |
+  Extract as JSON:
+  {
+    "title": "talk or document title",
+    "date": "date if available",
+    "venue": "where it was given, if mentioned",
+    "language_quotes": ["quotes specifically about language, etymology, or linguistic philosophy"],
+    "concepts": ["key concepts mentioned: logos, glossolalia, cultural OS, etc"],
+    "word_origins": ["any etymology or word origin discussions"],
+    "main_thesis": "summary of main argument about language in 1-2 sentences",
+    "related_topics": ["other topics discussed: DMT, psychedelics, culture, etc"]
+  }
+
+output_format: markdown
+output_path: "data/mckenna_language.md"
