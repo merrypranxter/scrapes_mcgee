@@ -1,3 +1,31 @@
+<div align="center">
+  <img src="banner.svg" alt="Scrapes McGee Banner">
+  
+# Scrapes McGee 🕷️
+```
+
+---
+
+### **2. Add Repository Description** (on GitHub)
+
+Click "About" (gear icon on right side), add:
+- **Description:** `LLM-guided web scraper with personality — talk to McGee, get targeted content extraction`
+- **Website:** Leave blank or add your portfolio
+- **Topics:** `web-scraping`, `llm`, `gemini`, `python`, `ai-agent`, `automation`
+
+---
+
+### **3. Optional: Add a License**
+
+On GitHub: Add file → Create new file → Name it `LICENSE`
+
+Paste MIT license (if you want open source):
+```
+MIT License
+
+Copyright (c) 2025 Merry
+
+Permission is hereby granted, free of charge...
 # Scrapes McGee 🕷️
 
 **LLM-guided web scraper with personality — talk to McGee, get targeted content extraction**
